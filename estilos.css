@@ -1,0 +1,387 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f1f5f9;
+    background: #0b0e14;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER Y MENÚ HAMBURGUESA */
+header {
+    background: #131824;
+    border-bottom: 2px solid #ef4444;
+    padding: 16px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h2 {
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ef4444;
+}
+
+/* SECCIONES GENERALES */
+section {
+    padding: 55px 7%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* BANNER INICIO */
+.inicio {
+    background: radial-gradient(circle at top, #1e2536 0%, #0b0e14 100%);
+    padding: 35px 5%;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid #2d3748;
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.2);
+    margin: 0 auto;
+}
+
+/* TARJETAS DE PRODUCTOS Y JUEGOS */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+article {
+    background: #161b26;
+    border: 1px solid #262f42;
+    border-radius: 12px;
+    padding: 18px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    position: relative;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+article:hover {
+    transform: translateY(-6px);
+    border-color: #ef4444;
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.18);
+}
+
+.foto {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 14px;
+}
+
+article h3 {
+    font-size: 15px;
+    margin: 10px 0 6px;
+    color: #fff;
+}
+
+article p {
+    margin: 8px 0 14px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+/* BOTONES */
+button {
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s, transform 0.15s;
+}
+
+button:hover {
+    background: #dc2626;
+    transform: scale(1.02);
+}
+
+/* JUEGOS */
+.juegos {
+    background: #0f131c;
+}
+
+/* OFERTAS */
+.ofertas {
+    background: #131824;
+    border-top: 1px solid #1f2937;
+    border-bottom: 1px solid #1f2937;
+}
+
+.banner-oferta {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto 25px;
+}
+
+.ofertas > p {
+    color: #94a3b8;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+.ofertas b {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: #ef4444;
+    color: white;
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+}
+
+.ofertas article del {
+    display: block;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: -8px;
+}
+
+/* DELIVERY */
+.delivery {
+    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+}
+
+.delivery > p {
+    color: #cbd5e1;
+}
+
+.delivery article {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.pasos {
+    background: #161b26;
+    border: 1px solid #2d3748;
+    border-radius: 12px;
+    padding: 22px;
+    margin-top: 30px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pasos h3 {
+    margin-bottom: 12px;
+    color: #38bdf8;
+}
+
+.pasos p {
+    display: inline-block;
+    margin: 8px 15px;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+/* CONTACTOS */
+.contactos {
+    background: radial-gradient(circle at top right, #1e1b4b, #0b0e14);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+    flex: 1;
+    align-items: center;
+}
+
+.contactos p {
+    margin: 14px 0;
+    color: #cbd5e1;
+}
+
+.contactos h3 {
+    margin-top: 25px;
+    color: #38bdf8;
+}
+
+/* FORMULARIOS (CONTACTO Y LOGIN) */
+form {
+    background: #161b26;
+    border: 1px solid #2d3748;
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+form h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #0f131c;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ef4444;
+}
+
+textarea {
+    height: 110px;
+    resize: vertical;
+}
+
+/* LOGIN */
+.login {
+    background: radial-gradient(circle at center, #1e1b4b 0%, #0b0e14 100%);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form {
+    width: 380px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.login form p {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.login .google {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.login .google:hover {
+    background: #cbd5e1;
+}
+
+/* FOOTER */
+footer {
+    background: #07090d;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+    padding: 35px 5%;
+}
+
+footer h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* RESPONSIVE Y MENÚ HAMBURGUESA EN MÓVIL */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #131824;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px 6%;
+        border-bottom: 2px solid #ef4444;
+        gap: 16px;
+        text-align: left;
+    }
+
+    #menu-toggle:checked ~ nav {
+        display: flex;
+    }
+
+    .contactos {
+        grid-template-columns: 1fr;
+    }
+}
